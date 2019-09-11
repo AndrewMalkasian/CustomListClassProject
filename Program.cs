@@ -10,8 +10,15 @@ namespace CustomListClassProject
     {
         static void Main(string[] args)
         {
-            List<int> test = new List<int>();
-            test.Add
+            List<int> numbers = new List<int>();
+            numbers.Add(2);
+            numbers.Add(4);
+            numbers.Add(6);
+            numbers.Add(7);
+            numbers.Add(10);
+
+
+
         }
     }
 }

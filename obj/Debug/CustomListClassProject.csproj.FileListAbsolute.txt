@@ -1,0 +1,7 @@
+C:\Users\Andrew Malkasian\Desktop\devCodeCamp\DevCodeCampWeek5\CustomListClassProject\bin\Debug\CustomListClassProject.exe.config
+C:\Users\Andrew Malkasian\Desktop\devCodeCamp\DevCodeCampWeek5\CustomListClassProject\bin\Debug\CustomListClassProject.exe
+C:\Users\Andrew Malkasian\Desktop\devCodeCamp\DevCodeCampWeek5\CustomListClassProject\bin\Debug\CustomListClassProject.pdb
+C:\Users\Andrew Malkasian\Desktop\devCodeCamp\DevCodeCampWeek5\CustomListClassProject\obj\Debug\CustomListClassProject.csprojAssemblyReference.cache
+C:\Users\Andrew Malkasian\Desktop\devCodeCamp\DevCodeCampWeek5\CustomListClassProject\obj\Debug\CustomListClassProject.csproj.CoreCompileInputs.cache
+C:\Users\Andrew Malkasian\Desktop\devCodeCamp\DevCodeCampWeek5\CustomListClassProject\obj\Debug\CustomListClassProject.exe
+C:\Users\Andrew Malkasian\Desktop\devCodeCamp\DevCodeCampWeek5\CustomListClassProject\obj\Debug\CustomListClassProject.pdb
