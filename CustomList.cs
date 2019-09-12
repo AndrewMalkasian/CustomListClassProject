@@ -13,9 +13,8 @@ namespace CustomListClassProject
         // member variables
        
         private T[] items;
-        private int count; 
         private int capacity;
-
+        private int count;
         public int Capacity
         {
             get {return capacity;}
@@ -23,7 +22,7 @@ namespace CustomListClassProject
        
         public int Count
         {
-            get {return count;}   
+             get {return count; }
         }
         public T this[int i]
         {
@@ -37,12 +36,36 @@ namespace CustomListClassProject
         public CustomList()
         {
             items = new T[4];
+            count = 0;
+            capacity = 4;
         }
 
-        public void Add(ref T item1, ref T item2)
+        public void Add(T value)
         {
 
+           if(Capacity == Count)
+            {
+                capacity *= 2; // capacity is a stored variable and will keep the value until assigned into new array
+                T[] newArray = new T[capacity];
+                for (int i = 0; i < Count; i++)
+                {
+                    newArray[i] = items[i];
+                }
+                items = newArray;
+            }
+
+            items[count] = value;
+            count++;
+
+
+            
+           
+            
+               
+                   
+                
         }
+    }
 
         // member methods
 
@@ -50,9 +73,5 @@ namespace CustomListClassProject
         //custom-built list class, so that I can get a count of the number of elements in my custom 
         //list class instance.
 
-        
-
-
-
-    }
 }
+

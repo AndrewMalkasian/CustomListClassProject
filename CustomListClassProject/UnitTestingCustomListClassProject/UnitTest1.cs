@@ -7,6 +7,7 @@ namespace UnitTestingCustomListClassProject
     [TestClass]
     public class CustomListTests
     {
+       
         [TestMethod]
         public void Add_AddItemToEmptyList_ItemGoesToIndexZero()
         {
@@ -29,10 +30,11 @@ namespace UnitTestingCustomListClassProject
             // arrange
             CustomList<int> testList = new CustomList<int>();
             int expected = 1;
-            int actual = testList.Count;
+            int actual;
 
             // act
             testList.Add(82);
+            actual = testList.Count;
 
             // assert
             Assert.AreEqual(expected, actual);
@@ -44,7 +46,7 @@ namespace UnitTestingCustomListClassProject
             CustomList<int> numbers = new CustomList<int>();
             
             int expected = 5;
-            int actual = numbers.Count;
+            int actual;
 
             //act
             numbers.Add(10);
@@ -52,6 +54,7 @@ namespace UnitTestingCustomListClassProject
             numbers.Add(30);
             numbers.Add(40);
             numbers.Add(50);
+            actual = numbers.Count;
 
             //assert
             Assert.AreEqual(expected, actual);
@@ -63,7 +66,7 @@ namespace UnitTestingCustomListClassProject
             CustomList<int> numbers = new CustomList<int>();
   
             int expected = 9;
-            int actual = numbers.Count;
+            int actual;
 
             //act
             numbers.Add(10);
@@ -75,6 +78,8 @@ namespace UnitTestingCustomListClassProject
             numbers.Add(70);
             numbers.Add(80);
             numbers.Add(90);
+
+            actual = numbers.Count;
             //assert
             Assert.AreEqual(expected, actual);
         }
