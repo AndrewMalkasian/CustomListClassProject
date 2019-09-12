@@ -26,8 +26,22 @@ namespace CustomListClassProject
         }
         public T this[int i]
         {
-            get { return items[i]; }
-            set { items[i] = value; }
+            get
+            {
+                return items[i];
+
+            }
+            set
+            {
+                if (i < 0 || i > count)
+                {
+
+                    throw new IndexOutOfRangeException("This isn't within the index.");
+
+                }
+                items[i] = value;
+
+            }
         }
 
 
@@ -64,6 +78,11 @@ namespace CustomListClassProject
                
                    
                 
+        }
+
+        public void RemoveAt()
+        {
+            throw new NotImplementedException();
         }
     }
 

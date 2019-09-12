@@ -10,12 +10,14 @@ namespace CustomListClassProject
     {
         static void Main(string[] args)
         {
-            //List<int> numbers = new List<int>();
-            //numbers.Add(2);
-            //numbers.Add(4);
-            //numbers.Add(6);
-            //numbers.Add(7);
-            //numbers.Add(10);
+            List<int> numbers = new List<int>();
+            numbers.Add(10);
+            numbers.Add(2);
+            numbers.Add(30);
+            numbers.Remove(40);
+
+
+            Console.WriteLine(numbers);
 
 
 
