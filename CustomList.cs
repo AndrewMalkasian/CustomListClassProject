@@ -35,9 +35,7 @@ namespace CustomListClassProject
             {
                 if (i < 0 || i > count)
                 {
-
                     throw new IndexOutOfRangeException("This isn't within the index.");
-
                 }
                 items[i] = value;
 
@@ -92,18 +90,34 @@ namespace CustomListClassProject
                 }
             }
 
-
+            
         }
-        public override string ToString()
+        public override string ToString()  
         {
-             T buildString = "";
-            for (int i = 0; i < Count; i++)
-            {
-                items[i] = buildString;
-                
-            }
+            string returnToStrings = string.Empty;
 
-            return
+            //foreach (T item in items)
+            //{
+            //  returnToStrings += string.Format("{0} ", item);
+            //}
+            //return returnToStrings;
+
+            for (int i = 0; i < count; i++)
+            {
+                if (i == count - 1)
+                {
+                    returnToStrings += string.Format("{0}", items);
+                }
+                else
+                {
+                    returnToStrings += string.Format("{0} ,", items);
+                } 
+   
+            }
+            
+            return returnToStrings;
+            
+          
         }
 
     }
