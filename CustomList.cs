@@ -96,15 +96,14 @@ namespace CustomListClassProject
         }
         public override string ToString()
         {
-            string buildString = "";
+             T buildString = "";
             for (int i = 0; i < Count; i++)
             {
-                items[i]
+                items[i] = buildString;
+                
             }
-            // take every item in the array convert to a string build onto our 
-            //buildString string
 
-            return buildString;
+            return
         }
 
     }

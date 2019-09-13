@@ -23,8 +23,13 @@ namespace CustomListClassProject
 
 
             //Console.WriteLine(numbers);
-            List<string> intList = new List<string>() {"1", "2" };
-            string result = intList.ToString();
+
+           
+
+            CustomList<string> numbers = new CustomList<string>();
+            numbers.Add("Billy");
+            numbers.Add("Bob");
+            string result = numbers.ToString();
             Console.WriteLine(result);
             Console.ReadLine();
 

@@ -208,9 +208,9 @@ namespace UnitTestingCustomListClassProject
             //assert
             Assert.AreEqual(expected, actual);
         }
-     
-      /////////////////////////////////////////////////////////TO STRING
-     
+
+        /////////////////////////////////////////////////////////TO STRING
+
         [TestMethod]
         public void ToString_MakeAValueAString_AValueBecomesAString()
         {
@@ -244,7 +244,7 @@ namespace UnitTestingCustomListClassProject
             Assert.AreEqual(expected, actual);
 
         }
-        [TestMethod]
+      
         //public void ToString_ReturnABool_StringReturnsBoolYesOrNo()
         //{
 
@@ -260,15 +260,16 @@ namespace UnitTestingCustomListClassProject
         //    //assert
         //    Assert.AreEqual(expected, actual);
         //}
-        public void ToString_()
-        {
+        //public void ToString_()
+        //{
 
-            //arrange
+        //    //arrange
 
-            //act
+        //    //act
 
-            //assert
+        //    //assert
 
-        }
+        //}
+        
     }
 }
