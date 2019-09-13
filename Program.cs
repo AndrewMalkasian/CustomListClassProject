@@ -11,9 +11,9 @@ namespace CustomListClassProject
         static void Main(string[] args)
         {
             List<int> numbers = new List<int>();
-            numbers.Add(10);
-            numbers.Add(2);
-            numbers.Add(30);
+            numbers.Add(40);
+            numbers.Add(40);
+            numbers.Add(40);
             numbers.Remove(40);
 
 

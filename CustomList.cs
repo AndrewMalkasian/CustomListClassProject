@@ -11,18 +11,18 @@ namespace CustomListClassProject
         //(10 points): As a developer, I want a Capacity property implemented on the custom-built list class,
         //so that I can publicly see the size of my private array.
         // member variables
-       
+
         private T[] items;
         private int capacity;
         private int count;
         public int Capacity
         {
-            get {return capacity;}
+            get { return capacity; }
         }
-       
+
         public int Count
         {
-             get {return count; }
+            get { return count; }
         }
         public T this[int i]
         {
@@ -54,10 +54,10 @@ namespace CustomListClassProject
             capacity = 4;
         }
 
-        public void Add(T value)
+        public void Add(T value) // covers adding of objects
         {
 
-           if(Capacity == Count)
+            if (Capacity == Count)
             {
                 capacity *= 2; // capacity is a stored variable and will keep the value until assigned into new array
                 T[] newArray = new T[capacity];
@@ -71,26 +71,37 @@ namespace CustomListClassProject
             items[count] = value;
             count++;
 
+   
 
-            
-           
-            
-               
-                   
-                
         }
-
-        public void RemoveAt()
+      
+        public void Remove(T value) //covers removal of objects
         {
-            throw new NotImplementedException();
+            
+            for (int i = 0; i < Count; i++)
+            {
+               if(value.Equals(items[i]))
+               {
+#pragma warning disable CS1717 // Assignment made to same variable
+                    for (i = i; i < Count - 1; i++)
+#pragma warning restore CS1717 // Assignment made to same variable
+                    {
+                        items[i] = items[i + 1];
+                    }
+                    count--;
+               }
+            }
+
+
         }
+
     }
 
-        // member methods
+    // member methods
 
-        //(10 points): As a developer, I want a read-only Count property implemented on the 
-        //custom-built list class, so that I can get a count of the number of elements in my custom 
-        //list class instance.
+    //(10 points): As a developer, I want a read-only Count property implemented on the 
+    //custom-built list class, so that I can get a count of the number of elements in my custom 
+    //list class instance.
 
 }
 

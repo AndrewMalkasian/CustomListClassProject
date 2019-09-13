@@ -86,23 +86,23 @@ namespace UnitTestingCustomListClassProject
         //ArgumentOutOfRangeException: If index is less than zero or index is equal to or greater than Count, 
         //where Count is number of elements in ArrayList.
         //NotSupportedException: If the ArrayList is read-only or the ArrayList has a fixed size.
-        [TestMethod]
-        public void Remove_OneItemFromAnEmptyArray_MaybeThrowException()
-        {
-            //arrange
-            CustomList<int> numbers = new CustomList<int>();
-            int expected = 0;
-            int actual;
-            //act
-            numbers.Remove(10);
-            actual = numbers.Count;
-            if(numbers.Count < 0)
-            {
-                throw new ArgumentOutOfRangeException("nah fam");
-            }
-            //assert
-            Assert.AreEqual(expected, actual);
-        }
+        //[TestMethod]
+        //public void Remove_OneItemFromAnEmptyArray_MaybeThrowException()
+        //{
+        //    //arrange
+        //    CustomList<int> numbers = new CustomList<int>();
+        //    int expected = 0;
+        //    int actual;
+        //    //act
+        //    numbers.Remove(10);
+        //    actual = numbers.Count;
+        //    if(numbers.Count < 0)
+        //    {
+        //        throw new ArgumentOutOfRangeException("nah fam");
+        //    }
+        //    //assert
+        //    Assert.AreEqual(expected, actual);
+        //}
         [TestMethod]
         public void Remove_OneItemFromListFirstIndex_ArrayBecomesEmpty()
         {
@@ -157,7 +157,7 @@ namespace UnitTestingCustomListClassProject
         {
             //arrange
             CustomList<int> numbers = new CustomList<int>();
-            int expected = 2;
+            int expected = 1;
             int actual;
 
             //act
@@ -201,6 +201,28 @@ namespace UnitTestingCustomListClassProject
             actual = numbers.Count;
             //assert
             Assert.AreEqual(expected, actual);
+        }
+       
+        [TestMethod]
+        public void ToString_1()
+        {
+           
+
+        }
+        [TestMethod]
+        public void ToString_2()
+        {
+
+        }
+        [TestMethod]
+        public void ToString_3()
+        {
+
+        }
+        [TestMethod]
+        public void ToString_4()
+        {
+
         }
     }
 }
