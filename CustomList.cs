@@ -71,17 +71,17 @@ namespace CustomListClassProject
             items[count] = value;
             count++;
 
-   
+
 
         }
-      
+
         public void Remove(T value) //covers removal of objects
         {
-            
+
             for (int i = 0; i < Count; i++)
             {
-               if(value.Equals(items[i]))
-               {
+                if (value.Equals(items[i]))
+                {
 #pragma warning disable CS1717 // Assignment made to same variable
                     for (i = i; i < Count - 1; i++)
 #pragma warning restore CS1717 // Assignment made to same variable
@@ -89,10 +89,22 @@ namespace CustomListClassProject
                         items[i] = items[i + 1];
                     }
                     count--;
-               }
+                }
             }
 
 
+        }
+        public override string ToString()
+        {
+            string buildString = "";
+            for (int i = 0; i < Count; i++)
+            {
+                items[i]
+            }
+            // take every item in the array convert to a string build onto our 
+            //buildString string
+
+            return buildString;
         }
 
     }

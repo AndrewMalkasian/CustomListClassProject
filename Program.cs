@@ -10,15 +10,23 @@ namespace CustomListClassProject
     {
         static void Main(string[] args)
         {
-            List<int> numbers = new List<int>();
-            numbers.Add(40);
-            numbers.Add(40);
-            numbers.Add(40);
-            numbers.Remove(40);
+            //List<int> toStringTest = new List<int>();
+            //toStringTest.Add(40);
+            //test.Add(40);
+            //numbers.Add(40);
+            //numbers.Remove(40);
+
+            //for (int i = 0; i < numbers.Count; i++)
+            //{
+            //    if(numbers.ToString()
+            //}
 
 
-            Console.WriteLine(numbers);
-
+            //Console.WriteLine(numbers);
+            List<string> intList = new List<string>() {"1", "2" };
+            string result = intList.ToString();
+            Console.WriteLine(result);
+            Console.ReadLine();
 
 
         }

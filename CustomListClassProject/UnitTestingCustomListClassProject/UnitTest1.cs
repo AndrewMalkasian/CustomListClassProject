@@ -103,6 +103,12 @@ namespace UnitTestingCustomListClassProject
         //    //assert
         //    Assert.AreEqual(expected, actual);
         //}
+        /// <summary>
+        /// ADD ABOVE ^
+        ///           | 
+        ///              |
+        /// REMOVE BELOW v
+        /// </summary>
         [TestMethod]
         public void Remove_OneItemFromListFirstIndex_ArrayBecomesEmpty()
         {
@@ -202,26 +208,66 @@ namespace UnitTestingCustomListClassProject
             //assert
             Assert.AreEqual(expected, actual);
         }
-       
+     
+      /////////////////////////////////////////////////////////TO STRING
+     
         [TestMethod]
-        public void ToString_1()
+        public void ToString_MakeAValueAString_AValueBecomesAString()
         {
-           
+            // _Making a value into a string accounts for 'Char'and int;
+            //arrange
+            CustomList<int> numbers = new CustomList<int>();
+            string expected = "21, 23";
+            string acutal;
+            //act
+            numbers.Add(21);
+            numbers.Add(23);
+
+            acutal = numbers.ToString();
+            //assert
+            Assert.AreEqual(expected, acutal);
+        }
+        [TestMethod]
+        public void ToString_MakeAStringAString_AStringStaysAString()
+        {
+
+            //arrange
+            CustomList<string> numbers = new CustomList<string>();
+            string expected = "Billy, Bob";
+            string actual;
+            //act
+            numbers.Add("Billy");
+            numbers.Add("Bob");
+
+            actual = numbers.ToString();
+            //assert
+            Assert.AreEqual(expected, actual);
 
         }
         [TestMethod]
-        public void ToString_2()
+        //public void ToString_ReturnABool_StringReturnsBoolYesOrNo()
+        //{
+
+        //    //arrange
+        //    CustomList<bool> numbers = new CustomList<bool>();
+        //    bool expected = true;
+        //    int acutal;
+        //    //act
+        //    numbers.Add(21 == 21);
+        //    numbers.Add(21 == 24);
+
+        //    acutal = //
+        //    //assert
+        //    Assert.AreEqual(expected, actual);
+        //}
+        public void ToString_()
         {
 
-        }
-        [TestMethod]
-        public void ToString_3()
-        {
+            //arrange
 
-        }
-        [TestMethod]
-        public void ToString_4()
-        {
+            //act
+
+            //assert
 
         }
     }
