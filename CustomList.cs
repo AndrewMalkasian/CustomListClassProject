@@ -120,13 +120,19 @@ namespace CustomListClassProject
           
         }
 
+        //public void ArrayConnector(params T[] comboArray)
+        //{
+ 
+        //    for (int i = 0; i < comboArray.Length; i++)
+        //    {
+
+        //    }
+        //}
+
     }
 
     // member methods
 
-    //(10 points): As a developer, I want a read-only Count property implemented on the 
-    //custom-built list class, so that I can get a count of the number of elements in my custom 
-    //list class instance.
-
+   
 }
 

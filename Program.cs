@@ -27,11 +27,9 @@ namespace CustomListClassProject
            
 
             CustomList<string> numbers = new CustomList<string>();
-            numbers.Add("Billy");
-            numbers.Add("Bob");
-            string result = numbers.ToString();
-            Console.WriteLine(result);
-            Console.ReadLine();
+
+           
+            
 
 
         }

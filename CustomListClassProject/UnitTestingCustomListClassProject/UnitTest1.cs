@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CustomListClassProject;
+using System.Collections.Generic;
 
 namespace UnitTestingCustomListClassProject
 {
@@ -191,6 +192,7 @@ namespace UnitTestingCustomListClassProject
             //assert
             Assert.AreEqual(expected, actual);
         }
+ 
         [TestMethod]
         public void Remove_OneItemFromListLastIndex_ArrayCountMinusOne()
         {
@@ -244,7 +246,7 @@ namespace UnitTestingCustomListClassProject
             Assert.AreEqual(expected, actual);
 
         }
-      
+
         //public void ToString_ReturnABool_StringReturnsBoolYesOrNo()
         //{
 
@@ -270,6 +272,56 @@ namespace UnitTestingCustomListClassProject
         //    //assert
 
         //}
-        
+        [TestMethod]
+        public void Operator_CombineTwoListsTogether_TheirNewCountsAreAddedTogether()
+        {
+
+            //arrange 
+            CustomList<int> one = new CustomList<int>();
+            CustomList<int> two = new CustomList<int>();
+            int expected = 6;
+            int actual;
+            //act
+            one.Add(1);
+            one.Add(3);
+            one.Add(5);
+
+            two.Add(2);
+            two.Add(4);
+            two.Add(6);
+
+            actual = one.Count + two.Count;
+
+
+            //assert
+            Assert.AreEqual(expected, actual);
+          
+        }
+        [TestMethod]
+        public void Operator_CombineTwoListsTogether_ListsWillCombine()
+        {
+
+            //arrange 
+            CustomList<int> one = new CustomList<int>();
+            CustomList<int> two = new CustomList<int>();
+            string expected = "1, 2 , 3 , 4 , 5 , 6";
+            string actual;
+            //act
+            one.Add(1);
+            one.Add(3);
+            one.Add(5);
+
+            two.Add(2);
+            two.Add(4);
+            two.Add(6);
+            
+            actual = one + two;
+
+
+            //assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }
+
