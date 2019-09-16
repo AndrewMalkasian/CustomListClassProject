@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomListClassProject
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable<T>
     {
         //(10 points): As a developer, I want a Capacity property implemented on the custom-built list class,
         //so that I can publicly see the size of my private array.
@@ -15,7 +16,7 @@ namespace CustomListClassProject
         private T[] items;
         private int capacity;
         private int count;
-        public int value;
+       
 
         public int Capacity
         {
@@ -26,12 +27,14 @@ namespace CustomListClassProject
         {
             get { return count; }
         }
+
+        public object Current => throw new NotImplementedException();
+
         public T this[int i]
         {
             get
             {
                 return items[i];
-                
             }
             set
             {
@@ -79,7 +82,29 @@ namespace CustomListClassProject
         }
 
 
-        
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return items[i];
+            }
+            //
+
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+        public bool MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
 
         // constructor
         public CustomList()
@@ -88,6 +113,7 @@ namespace CustomListClassProject
             count = 0;
             capacity = 4;
         }
+
 
         public void Add(T value) // covers adding of objects
         {
@@ -150,15 +176,32 @@ namespace CustomListClassProject
                     returnToStrings += string.Format("{0} ,", items);
                 }
 
-            }
+            };
 
             return returnToStrings;
 
 
         }
 
+        public CustomList<T> Zipper(CustomList<T> one, CustomList<T> two)
+        {
+            CustomList<T> tempList = new CustomList<T>();
+            int threeCount = one.count + two.count;
 
-
+                for (int i = 0; i < threeCount; i++)
+                {
+                    if (i < one.Count)
+                    {
+                        tempList.Add(one[i]);
+                    }
+                    if (i < two.Count)
+                    {
+                        tempList.Add(two[i]);
+                    }
+                }
+            return tempList;
+        }
+       
 
     }
 

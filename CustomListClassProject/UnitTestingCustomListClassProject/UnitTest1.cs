@@ -320,8 +320,8 @@ namespace UnitTestingCustomListClassProject
             two.Add(2);
             two.Add(4);
             two.Add(6);
-            int actual = one + two;
-
+            // int actual = one + two; (changed acutal custom list)
+            CustomList<int> actual = one + two;
           
 
 

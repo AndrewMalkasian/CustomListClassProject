@@ -33,9 +33,12 @@ namespace CustomListClassProject
             two.Add(2);
             two.Add(4);
             two.Add(6);
-            CustomList<int> three = one + two;
+            CustomList<int> three = new CustomList<int>();
 
-            Console.WriteLine(three);
+          
+            Console.WriteLine(three.Zipper(one, two));
+            Console.ReadLine();
+       
            
             
 
