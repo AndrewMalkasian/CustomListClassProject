@@ -15,6 +15,8 @@ namespace CustomListClassProject
         private T[] items;
         private int capacity;
         private int count;
+        public int value;
+
         public int Capacity
         {
             get { return capacity; }
@@ -29,7 +31,7 @@ namespace CustomListClassProject
             get
             {
                 return items[i];
-
+                
             }
             set
             {
@@ -41,9 +43,28 @@ namespace CustomListClassProject
 
             }
         }
+        public static CustomList<T> operator +(CustomList<T> one, CustomList<T> two)
+        {
+
+            CustomList<T> tempList = new CustomList<T>();
 
 
+            // tempList {}
+            for (int i = 0; i < one.count; i++)
+            {
+                tempList.Add(one[i]);
+            }
 
+            for (int i = 0; i < two.count; i++)
+            {
+                tempList.Add(two[i]);
+            }
+            return tempList;
+        }
+
+      
+
+        
         // constructor
         public CustomList()
         {
@@ -90,11 +111,11 @@ namespace CustomListClassProject
                 }
             }
 
-            
+
         }
-        public override string ToString()  
+        public override string ToString()
         {
-            string returnToStrings = string.Empty;
+            string returnToStrings = string.Empty; // same as "";
 
             //foreach (T item in items)
             //{
@@ -111,28 +132,30 @@ namespace CustomListClassProject
                 else
                 {
                     returnToStrings += string.Format("{0} ,", items);
-                } 
-   
+                }
+
             }
-            
+
             return returnToStrings;
-            
-          
+
+
         }
 
-        //public void ArrayConnector(params T[] comboArray)
-        //{
- 
-        //    for (int i = 0; i < comboArray.Length; i++)
-        //    {
 
-        //    }
-        //}
+
 
     }
 
-    // member methods
-
-   
 }
+// member methods
+//public void ArrayConnector(params T[] comboArray)
+//{
+
+//    for (int i = 0; i < comboArray.Length; i++)
+//    {
+
+//    }
+//}
+
+
 

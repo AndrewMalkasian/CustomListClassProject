@@ -192,7 +192,7 @@ namespace UnitTestingCustomListClassProject
             //assert
             Assert.AreEqual(expected, actual);
         }
- 
+
         [TestMethod]
         public void Remove_OneItemFromListLastIndex_ArrayCountMinusOne()
         {
@@ -295,33 +295,36 @@ namespace UnitTestingCustomListClassProject
 
             //assert
             Assert.AreEqual(expected, actual);
-          
-        }
-        [TestMethod]
-        public void Operator_CombineTwoListsTogether_ListsWillCombine()
-        {
-
-            //arrange 
-            CustomList<int> one = new CustomList<int>();
-            CustomList<int> two = new CustomList<int>();
-            string expected = "1, 2 , 3 , 4 , 5 , 6";
-            string actual;
-            //act
-            one.Add(1);
-            one.Add(3);
-            one.Add(5);
-
-            two.Add(2);
-            two.Add(4);
-            two.Add(6);
-            
-            actual = one + two;
-
-
-            //assert
-            Assert.AreEqual(expected, actual);
 
         }
+        //[TestMethod]
+        //public void Operator_CombineTwoListsTogether_ListsWillCombine()
+        //{
+
+        //    //arrange 
+        //    CustomList<int> one = new CustomList<int>();
+        //    CustomList<int> two = new CustomList<int>();
+        //    string expected = "1, 2 , 3 , 4 , 5 , 6";
+        //    string actual;
+        //    //act
+        //    one.Add(1);
+        //    one.Add(3);
+        //    one.Add(5);
+
+        //    two.Add(2);
+        //    two.Add(4);
+        //    two.Add(6);
+
+        //    //actual = one + two;
+
+
+        //    //assert
+        //    //Assert.AreEqual(expected, actual);
+
+        //}
+
     }
+
+
 }
 

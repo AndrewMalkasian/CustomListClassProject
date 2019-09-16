@@ -23,11 +23,19 @@ namespace CustomListClassProject
 
 
             //Console.WriteLine(numbers);
+            CustomList<int> one = new CustomList<int>();
+            CustomList<int> two = new CustomList<int>();
+            //act
+            one.Add(1);
+            one.Add(3);
+            one.Add(5);
 
-           
+            two.Add(2);
+            two.Add(4);
+            two.Add(6);
+            CustomList<int> three = one + two;
 
-            CustomList<string> numbers = new CustomList<string>();
-
+            Console.WriteLine(three);
            
             
 
