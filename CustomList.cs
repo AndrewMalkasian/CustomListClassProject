@@ -61,10 +61,26 @@ namespace CustomListClassProject
             }
             return tempList;
         }
+        public static CustomList<T> operator -(CustomList<T> one, CustomList<T> two)
+        {
 
-      
+            CustomList<T> tempList = new CustomList<T>();
+
+            for (int i = 0; i < one.count; i++)
+            {
+                tempList.Add(one[i]);
+            }
+
+            for (int i = 0; i < two.count; i++)
+            {
+                tempList.Remove(two[i]);
+            }
+            return tempList;
+        }
+
 
         
+
         // constructor
         public CustomList()
         {
