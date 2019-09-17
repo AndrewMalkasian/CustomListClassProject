@@ -139,15 +139,17 @@ namespace CustomListClassProject
         public void Remove(T value) //covers removal of objects
         {
 
+
             for (int i = 0; i < Count; i++)
             {
                 if (value.Equals(items[i]))
                 {
 #pragma warning disable CS1717 // Assignment made to same variable
-                    for (i = i; i < Count - 1; i++)
+                    for (i = i; i < Count- 1; i++)
 #pragma warning restore CS1717 // Assignment made to same variable
                     {
-                        items[i] = items[i + 1];
+                    
+                        items[i] = items[i + 1]; // because value(aka count) is == to I in this situation
                     }
                     count--;
                 }

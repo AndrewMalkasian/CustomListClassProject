@@ -25,24 +25,26 @@ namespace CustomListClassProject
             //Console.WriteLine(numbers);
             CustomList<int> one = new CustomList<int>();
             CustomList<int> two = new CustomList<int>();
+            CustomList<int> three;
             //act
             one.Add(1);
             one.Add(3);
             one.Add(5);
 
             two.Add(2);
-            two.Add(4);
+            two.Add(1);
             two.Add(6);
-            CustomList<int> three = new CustomList<int>();
-
-          
-            Console.WriteLine(three.Zipper(one, two));
-            Console.ReadLine();
-       
+            two.Add(7);
+            two.Remove(1);
            
             
 
+            //three = one - two;
+
+            //Console.WriteLine(three);
+
 
         }
+       
     }
 }
